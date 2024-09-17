@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const claculateperi=(...sides)=>2*sides.reduce((length,breadth)=>length+breadth,0)
+
+        const peri1=[1,2];
+        let result=claculateperi(...peri1);
+        document.write(`the  peri for ${peri1[0]} and ${peri1[1]}  is   ${result},<br>`)
+        let n=9;
+        let h=5;
+        let re=claculateperi(n,h);
+        document.write(`the peri is ${re}`)
+    </script>
+</body>
+</html>

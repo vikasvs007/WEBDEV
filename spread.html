@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <script>
+            const calculate=(...sides)=>2*sides.reduce((length,breadth)=>length+breadth,0);
+            const sidearray=[4,6];
+            const calcusingspread=calculate(...sidearray);
+            document.write(`parameter of rectangle using spread is :${calcusingspread}`,"<br>");
+            const length=10;
+            const breadth=38;
+            const calcusingrest=calculate(length,breadth);
+            document.write(`parameter using rest :${ calcusingrest}`);
+        </script>
+    </body>
+</html>
