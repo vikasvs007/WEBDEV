@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>
+            leap year
+        </title>
+    </head>
+<script>
+    const isleapyear=year=>{
+        if(year%4===0)
+    {
+        if(year%100===0 && year%400!==0)
+    {
+        return false;
+
+    }
+    else{
+        return true;
+
+    }
+    }
+    else{
+        return false;
+    }
+    };
+
+    const alertleapyear=year=>
+    {
+        const result=isleapyear(year);
+       alert(`${year} is a leap year :${result}`);
+
+
+    }
+
+    alertleapyear(20004);
+    alertleapyear(3334);
+    alertleapyear(3487);
+</script>
+</html>

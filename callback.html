@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>
+            callback function
+        </title>
+    </head>
+    <script>
+        function asyncfunction(callback)
+        {
+            setTimeout(()=>{
+                document.write("asynch function is complete  <br>");
+                callback();
+
+            },2000);
+        }
+
+        function saygoodbye()
+        {
+            document.write(" good bye <br> :");
+
+        }
+        asyncfunction(saygoodbye);
+        document.write("waiting :");
+    </script>
+</html>
