@@ -1,0 +1,218 @@
+/* Reset and Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+/*for the first el*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #ffffff;
+    padding: 10px;
+    border-bottom: 2px solid #ccc;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 80px; /* Adjust as needed */
+    margin-right: 15px;
+}
+
+.college-info h1 {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.college-info p {
+    font-size: 14px;
+    color: #555;
+}
+
+.nav-menu ul {
+    list-style: none;
+    display: flex;
+}
+
+.nav-menu ul li {
+    margin-left: 20px;
+}
+
+.nav-menu ul li a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #000;
+    font-weight: bold;
+}
+
+.nav-menu ul li a:hover {
+    color: #007BFF; /* Add your hover effect color */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* Announcement Bar */
+.announcement-bar {
+    background-color: #00a1b5; /* Adjust color based on the image */
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    position: relative;
+}
+
+.announcement-text {
+    flex:100;
+    font-size: 16px;
+}
+
+.announcement-text p {
+    margin: 0;
+}
+
+.announcement-text span {
+    color: #fff;
+}
+
+.call-to-action {
+    margin-left: 20px;
+}
+
+.call-to-action .btn {
+    border: 1px solid white;
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.call-to-action .btn:hover {
+    background-color: white;
+    color: #00a1b5;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.social-icons a {
+    color: white;
+    text-decoration: none;
+}
+
+.social-icons img {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+}
+
+.close-icon {
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+  body {
+    top: 0%;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Logo Styles */
+  
+  /* Navbar Styles */
+  nav {
+    background-color: #333;
+    color: #fff;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    position: fixed;
+  }
+  nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+  }
+  nav ul li {
+    padding: 10px 20px;
+  }
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+  }
+  nav ul li a:hover {
+    color: #ff6600;
+  }
+  
+  /* Add padding to body to avoid content being hidden behind the navbar */
+ 
+  
+  /* Section Styles */
+  section {
+    height: 100vh;
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Hero Section */
+  #home {
+    background-image: url(HHS_0330.JPG); /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+  }
+  #home h1 {
+    font-size: 50px;
+  }
+  #home p {
+    font-size: 24px;
+  }
+
