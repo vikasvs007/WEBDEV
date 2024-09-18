@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class box
+        {
+            constructor(length,breadth,height)
+            {
+                this.length=length;
+                this.breadth=breadth;
+                this.height=height;
+            }
+        }
+        class boxweight extends box
+        {
+            constructor(length,breadth,height,weight)
+            {
+                super(length,breadth,height)
+                this.weight=weight;
+            }
+        }
+        class boxshipment extends boxweight
+        {
+            constructor(length,breadth,height,weight,shipment)
+            {
+                super(length,breadth,height,weight)
+                this.shipment=shipment;
+            }
+        }
+        const result=new boxshipment (10,11,12,1,4);
+        console.log("the breadth :"+result.breadth)
+        console.log("the length :"+result.length)
+
+        console.log("the height :"+result.height)
+        console.log("the weight :"+result.weight)
+
+        console.log("the shipment :"+result.shipment)
+
+
+            </script>
+</body>
+</html>

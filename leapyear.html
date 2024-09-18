@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function leap(year)
+        {
+            if(year%400==0||(year%4==0&&year%100!=0))
+        {
+            alert(`the year ${year} is leap year`);
+        }
+           else
+        {
+            alert(`the year ${year} not leap`);
+        }
+        }
+    
+
+        leap(2004);
+        leap(2000);
+        leap(1992);
+        leap(1993)
+    </script>
+    
+</body>
+</html>

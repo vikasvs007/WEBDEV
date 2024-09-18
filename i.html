@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="calculate()">claculate</button>
+    <script>
+        function optionalparameter(price,quantity=1,discount=0)
+        {
+            const total=price*quantity*(1-discount);
+            return total;
+        }
+        function calculate()
+        {
+        const result =optionalparameter(1);
+        alert(`the toatl price is ${result}`,"<br>");
+        const result1 =optionalparameter(1,10,.2 );
+        alert(`the toatl price is ${result1}`,"<br>");
+        const result2 =optionalparameter(1,50,.4);
+        alert(`the toatl price is ${result2}`,"<br>");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insertion Sort Visualization</title>
+    <style>
+        /* CSS styles for the visualization */
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            text-align: center;
+        }
+        .array-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .array-element {
+            width: 30px;
+            height: 30px;
+            margin: 0 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #3498db;
+            color: white;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .sorted {
+            background-color: #2ecc71;
+        }
+        .current {
+            background-color: #e74c3c;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Insertion Sort Visualization</h1>
+        <div class="array-container" id="arrayContainer"></div>
+        <button onclick="startSort()">Start Sorting</button>
+    </div>
+
+    <script>
+        // JavaScript code for insertion sort
+        const array = [64, 34, 25, 12, 22, 11, 90];
+        const delay = 1000; // Delay between steps (in milliseconds)
+
+        function createArrayElements() {
+            const container = document.getElementById('arrayContainer');
+            container.innerHTML = '';
+            array.forEach(num => {
+                const element = document.createElement('div');
+                element.className = 'array-element';
+                element.textContent = num;
+                container.appendChild(element);
+            });
+        }
+
+        async function insertionSort() {
+            const elements = document.getElementsByClassName('array-element');
+            
+            for (let i = 1; i < array.length; i++) {
+                let key = array[i];
+                let j = i - 1;
+
+                elements[i].classList.add('current');
+                await new Promise(resolve => setTimeout(resolve, delay));
+
+                while (j >= 0 && array[j] > key) {
+                    array[j + 1] = array[j];
+                    elements[j + 1].textContent = array[j];
+                    elements[j].classList.add('sorted');
+                    j = j - 1;
+                    await new Promise(resolve => setTimeout(resolve, delay));
+                }
+
+                array[j + 1] = key;
+                elements[j + 1].textContent = key;
+                elements[i].classList.remove('current');
+                elements[j + 1].classList.add('sorted');
+                await new Promise(resolve => setTimeout(resolve, delay));
+            }
+        }
+
+        function startSort() {
+            createArrayElements();
+            insertionSort();
+        }
+
+        // Initial array display
+        createArrayElements();
+    </script>
+</body>
+</html>

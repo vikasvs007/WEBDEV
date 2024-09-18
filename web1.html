@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let n=prompt("enter an number element in array");
+        let i,j,temp;
+        const a=[];
+        for(i=0;i<n;i++)
+    {
+        a[i]=prompt("enter an elements to the array")
+    }
+        for(i=0;i<n;i++)
+    {
+        for(j=i+1;j<n;j++)
+    {
+        if(a[i]>a[j])
+    {
+
+        temp=a[i];
+        a[i]=a[j];
+        a[j]=temp;
+    }
+    }
+    }
+    document.write(a.sort())
+    document.write("sortde array:")
+    
+    for(i=0;i<n;i++)
+    {
+        document.write(a[i]+" ");
+    }
+    </script>
+</body>
+</html>
